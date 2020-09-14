@@ -1,0 +1,23 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "end-to-end testing with cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-image-snapshot": "^3.1.1",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "cypress": "^4.12.1"
+  }
+}

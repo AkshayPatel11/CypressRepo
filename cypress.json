@@ -1,0 +1,15 @@
+{
+  "watchForFileChanges": false,
+  "video": true,
+  "viewportWidth": 1000,
+  "viewportHeight": 600,
+  "waitForAnimation": true,
+  "animationDistanceTreshold": 20,
+  "defaultCommandTimeout": 6000,
+  "execTimeout": 60000,
+  "pageloadTimeout": 60000,
+  "requestTimeout": 15000,
+  "responseTimeout": 15000,
+  "failOnStatucCode": false,
+  "projectId": "8gd4ps"
+}
