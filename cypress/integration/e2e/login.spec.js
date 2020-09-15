@@ -16,7 +16,7 @@ describe('Login Failed Test', function () {
             var rec = recordset
             const Values = Object.values(rec[0]);
             const keys = Object.keys(rec[0]);
-            cy.log(Values)
+            
             let result = {};
             let index = 0;
             
