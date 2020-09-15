@@ -1,3 +1,4 @@
+import { values } from 'cypress/types/lodash'
 /// <reference types="Cypress" />
 import { url, login_username, login_password } from '../../../Config'
 import Navbar from '../../Page-Objects/Components/Navbar'
@@ -13,10 +14,11 @@ describe('Login Failed Test', function () {
 
     it.only('Test DataBase Connection with SQL', function () {
         cy.sqlServer(`select * from sales.order_items`).then(function (recordset) {
+            //Collect data base vaue in recordset
             var rec = recordset
             const Values = Object.values(rec[0]);
             const keys = Object.keys(rec[0]);
-            
+            cy.log(values)
             let result = {};
             let index = 0;
             
