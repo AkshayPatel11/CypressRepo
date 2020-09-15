@@ -15,9 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "cypress-image-snapshot": "^3.1.1",
+    "lodash": "^4.17.20",
     "prettier": "^1.19.1"
   },
   "devDependencies": {
-    "cypress": "^4.12.1"
+    "cypress": "^4.12.1",
+    "cypress-sql-server": "^1.0.0"
   }
 }

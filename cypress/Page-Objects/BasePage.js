@@ -32,4 +32,5 @@ export default class BasePage
     {
         cy.viewport(1980,1080)
     }
+    
 }

@@ -19,12 +19,13 @@
 const { addMatchImageSnapshotPlugin } = require('cypress-image-snapshot/plugin')
 const fs = require('fs-extra')
 const path = require('path')
+const sqlServer = require('cypress-sql-server')
+const dbConfig = require('../../cypress.json');
 
+module.exports = (on, config) => {
 
-module.exports = (on, config) => 
-{
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+  tasks = sqlServer.loadDBPlugin(dbConfig.db);
+  on('task', tasks);
   addMatchImageSnapshotPlugin(on, config)
 
   // To get the process config file name
@@ -32,17 +33,19 @@ module.exports = (on, config) =>
     const file = config.env.name || "default"
     return getConfigFile(file).then(function (file) {
       file.baseUrl = file.baseUrl + process.env.URI_ROOT
-     //return file object
-    return file;
+      //return file object
+      return file;
     })
   }
 
   //
   function getConfigFile(file) {
-    
+
     const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`)
     return fs.readJson(pathToConfigFile)
   }
   //return the configuration file
   return processConfigName(on, config);
+
+
 }

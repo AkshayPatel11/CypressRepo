@@ -11,5 +11,15 @@
   "requestTimeout": 15000,
   "responseTimeout": 15000,
   "failOnStatucCode": false,
-  "projectId": "8gd4ps"
+  "projectId": "8gd4ps",
+  "db": {
+    "userName": "sa",
+    "password": "123",
+    "server": "AKS",
+    "options": {
+        "database": "BikeStores",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion" : true
+    }
+}
 }
